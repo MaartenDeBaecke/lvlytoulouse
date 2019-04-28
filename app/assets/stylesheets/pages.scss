@@ -1,0 +1,27 @@
+body {
+  text-align: center;
+}
+
+h1 {
+  font-size: 45px;
+  font-family: 'Roboto', sans-serif;
+}
+
+@media (max-width: 45em) {
+  .intro {
+    marin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 2rem;
+    min-height: 28em;
+    min-width: 17em;
+    border-style: solid;
+    border-radius: 1%;
+    border-width: 1px;
+  }
+}
+
+@media (min-width: 45em) {
+  .intro {
+    
+  }
+}
