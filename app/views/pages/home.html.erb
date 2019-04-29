@@ -2,11 +2,70 @@
   
 </head>
 <body>
+  <br>
   <h1>Lovely Toulouse</h1>
 
-  <div class"card">
-    <div class="intro">
-      hoi
+  <div class="container">
+
+    <div class"card">
+      <div class="intro">
+        <%= image_tag "Toulouse1.jpg" %>
+        </div>
+      </div>
     </div>
   </div>
+  <div class="container">
+    <div class"card">
+      <div class="comment">
+        <div class="row">
+          <div class="col-xsm-6">
+            <div class="comments">
+              <%= image_tag "Toulouse2.jpg" %>
+            </div>
+          </div>
+          <div class="col-xsm-6">
+            <div class="comment-text">
+              <p>Hi, I am Lovely Toulouse.<br> Do you want to learn more about my favourite <br>products?</p>
+            </div>
+            <div class="check-it">
+              <%=link_to "Check it out", food_path, class: 'btn btn-primary' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <div class="container">
+    <div class="card">
+      <div class="menuss">
+        <div class="row">
+          <div class="col-xsm-6">
+            <div class="comments">
+              <%= image_tag "catfood" %>
+            </div>
+          </div>
+          <div class="col-xsm-6">
+            <div class="comment-text">
+              <strong>Food</strong>
+              <p>For those who are always hungry</p>
+            </div>
+            <div class="check-it">
+              <%=link_to "Food", food_path, class: 'btn btn-primary' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
+
+<br>
+<br>
+<br>
+<br>
+<br>
