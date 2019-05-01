@@ -1,7 +1,9 @@
 <head>
-  
+  <%= render "shared/navhome" %>
 </head>
 <body>
+  <br>
+  <br>
   <br>
   <h1>Lovely Toulouse</h1>
 
@@ -38,14 +40,16 @@
   <br>
   <br>
   <br>
-
   <div class="container">
-    <div class="card">
-      <div class="menuss">
+    <div class"card">
+      <!--<div class="custom-card-header">
+        <h3> Menu</h3>
+      </div>-->
+      <div class="menu-comment">
         <div class="row">
           <div class="col-xsm-6">
             <div class="comments">
-              <%= image_tag "catfood" %>
+              <%= image_tag "catfood.jpg" %>
             </div>
           </div>
           <div class="col-xsm-6">
@@ -53,7 +57,7 @@
               <strong>Food</strong>
               <p>For those who are always hungry</p>
             </div>
-            <div class="check-it">
+            <div class="menu-btn">
               <%=link_to "Food", food_path, class: 'btn btn-primary' %>
             </div>
           </div>
@@ -62,10 +66,51 @@
     </div>
   </div>
 
+  <div class="container">
+    <div class"card">
+      <div class="menu-comment">
+        <div class="row">
+          <div class="col-xsm-6">
+            <div class="comments">
+              <%= image_tag "cat_toy.jpg" %>
+            </div>
+          </div>
+          <div class="col-xsm-6">
+            <div class="comment-text">
+              <strong>Toys</strong>
+              <p>Wich cat doesn't love playing?</p>
+            </div>
+            <div class="menu-btn">
+              <%=link_to "Toys", toys_path, class: 'btn btn-primary' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class"card">
+      <div class="menu-comment">
+        <div class="row">
+          <div class="col-xsm-6">
+            <div class="comments">
+              <%= image_tag "handy_stugg.jpg" %>
+            </div>
+          </div>
+          <div class="col-xsm-6">
+            <div class="comment-text">
+              <strong>Handy Stuff</strong>
+              <p>Things like a litter box,<br> scratching post, food bowl...</p>
+            </div>
+            <div class="menu-btn">
+              <%=link_to "Toys", toys_path, class: 'btn btn-primary' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= render "shared/footer" %>
 </body>
 
-<br>
-<br>
-<br>
-<br>
-<br>

@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "font-awesome";
 
 body {
   text-align: left;
@@ -54,19 +55,14 @@ h1 {
   position: absolute;
   right: 4%;
   top: 35px;
-
 }
-
-
 
 
 @media (max-width: 60em) {
   .intro {
     padding: 17px;
     margin-top: 2rem;
-  
     min-width: 17em;
-    
     border-radius: 1%;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.3);
   }
@@ -79,11 +75,23 @@ h1 {
     height: auto;
     position: relative;
   }
-  .menuss {
+
+  .menu-comment {
     padding: 17px;
-    min-width: 17em;
-    border-radius: 1%;
+    margin-top: 10px;
+    border-radius: 2px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.3);
+    height: 93px;
+    position: relative;
+  }
+  .custom-card-header {
+    background-color: #007bff;
+    color: white;
+    margin-bottom: -10px;
+    border-radius: 6px 6px 0px 0px;;
+    padding: 7px 4px 1px 4px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
   }
 }
 
@@ -112,16 +120,74 @@ h1 {
     margin-right: auto !important;
   }
 
-  .menuss {
+  .menu-comment {
     padding: 17px;
-    min-width: 50em;
-    border-radius: 1%;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.3);
+    margin-top: 10px;
+    border-radius: 6px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.3);
+    height: auto;
     position: relative;
     max-width: 50em;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
-  
+  .custom-card-header {
+    background-color: #007bff;
+    color: white;
+    margin-bottom: -10px;
+    border-radius: 6px 6px 0px 0px;;
+    padding: 7px 4px 1px 4px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    height: auto;
+    position: relative;
+    max-width: 50em;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 }
+
+.footer-card {
+  margin-top: 2rem;
+  background-color: #007bff;
+  color: white;
+  width: 100%;
+  border-radius: 5px 5px 0;
+  position: relative;
+}
+
+
+.footer-text {
+  padding-top: 10px;
+  margin-left: 3%;
+  padding-bottom: 10px;
+  strong {
+    font-family: 'Teko', sans-serif;
+    font-size: 17px;
+  }
+}
+
+a {
+  color: white;
+
+  &:visited {
+    color: white;
+  }
+
+  &:hover {
+    &:visited {
+    color: white;
+    }  
+  }
+}
+
+.arrow {
+  position: absolute;
+  z-index: 20;
+  top: 50px;
+  text-align: right;
+  right: 6%;
+}
+
+
