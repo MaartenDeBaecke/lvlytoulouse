@@ -1,12 +1,47 @@
 <head>
   <%= render "shared/navhome" %>
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $("#back2Top").click(function(event) {
+          var mqq = window.matchMedia( "(max-width: 580px)" );
+          var mq = window.matchMedia( "(min-width: 580px)" );
+          var mmq = window.matchMedia( "(min-width: 770px)" );
+          var m = window.matchMedia( "(min-width: 1000px)" );
+          if (mq.matches) {
+            if (mmq.matches) {
+              if (m.matches) {
+                $("html, body").animate({ scrollTop: 780 }, "med");
+              return false;
+              } else {
+              $("html, body").animate({ scrollTop: 740 }, "med");
+              return false;
+              }
+            } else {
+              $("html, body").animate({ scrollTop: 660 }, "med");
+            return false;
+            }
+          }
+          else if (mqq.matches) {
+            $("html, body").animate({ scrollTop: 620 }, "med");
+            return false;
+          }
+
+          else {
+             $("html, body").animate({ scrollTop: 8000 }, "med");
+            return false;
+          }
+          
+        });
+
+    });
+  </script>
 </head>
 <body>
   <br>
   <br>
   <br>
-  <h1>Lovely Toulouse</h1>
 
+  <h1>Lovely Toulouse</h1>
   <div class="container">
 
     <div class"card">
@@ -30,7 +65,7 @@
               <p>Hi, I am Lovely Toulouse.<br> Do you want to learn more about my favourite <br>products?</p>
             </div>
             <div class="check-it">
-              <%=link_to "Check it out", food_path, class: 'btn btn-primary' %>
+              <a id="back2Top"class="btn btn-primary" href _blanc>Check it out</a>
             </div>
           </div>
         </div>
@@ -39,12 +74,12 @@
   </div>
   <br>
   <br>
-  <br>
+
   <div class="container">
     <div class"card">
-      <!--<div class="custom-card-header">
+      <div class="custom-card-header">
         <h3> Menu</h3>
-      </div>-->
+      </div>
       <div class="menu-comment">
         <div class="row">
           <div class="col-xsm-6">
@@ -111,6 +146,7 @@
       </div>
     </div>
   </div>
+  <br>
   <%= render "shared/footer" %>
 </body>
 

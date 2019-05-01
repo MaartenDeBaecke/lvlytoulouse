@@ -80,18 +80,20 @@ h1 {
     padding: 17px;
     margin-top: 10px;
     border-radius: 2px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 9px rgba(0,0,0,0.12), 0 0px 3px rgba(0,0,0,0.3);
     height: 93px;
     position: relative;
   }
   .custom-card-header {
     background-color: #007bff;
+    margin-top: 1rem;
     color: white;
     margin-bottom: -10px;
     border-radius: 6px 6px 0px 0px;;
     padding: 7px 4px 1px 4px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
+    box-shadow: 3px -5px 9px rgba(0,0,0,0.12), 0 0px 3px rgba(0,0,0,0.3);
   }
 }
 
@@ -123,8 +125,8 @@ h1 {
   .menu-comment {
     padding: 17px;
     margin-top: 10px;
-    border-radius: 6px;
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.3);
+    border-radius: 2px;
+    box-shadow: 0px 0px 9px rgba(0,0,0,0.12), 0 0px 3px rgba(0,0,0,0.3);
     height: auto;
     position: relative;
     max-width: 50em;
@@ -145,6 +147,7 @@ h1 {
     max-width: 50em;
     margin-left: auto !important;
     margin-right: auto !important;
+    box-shadow: 3px -5px 9px rgba(0,0,0,0.12), 0 0px 3px rgba(0,0,0,0.3);
   }
 }
 
