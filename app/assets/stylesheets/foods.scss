@@ -1,3 +1,11 @@
+.link {
+  color:black;
+}
+
+#link:hover {
+  color:black;
+}
+
 .comments{
   display: inline-block;
   width: 70px;
@@ -28,6 +36,15 @@
     height: auto;
     position: relative;
   }
+  .food_card {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .comment-wrap {
+    margin-left: 13px;
+    margin-right: 13px;
+  }
+
 }
 
 @media (min-width: 60em) {
@@ -38,6 +55,11 @@
     box-shadow: 1px 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.3);
     height: auto;
     position: relative;
+    max-width: 50em;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .food-card-container {
     max-width: 50em;
     margin-left: auto !important;
     margin-right: auto !important;
@@ -58,3 +80,41 @@
   }
 }
 
+.food_img > img{
+  width: 10rem;
+  padding: 15px;
+}
+
+.food_title {
+  margin-left: 2rem;
+  padding: 15px;
+  margin-top: 10px;
+  margin-bottom: -15px;
+}
+
+.food_description {
+  margin-left: 2rem;
+  padding: 15px;
+  font-size: 14px;
+}
+
+.edit-food {
+  margin-left: 2rem;
+  padding: 15px;
+}
+
+.food_title1 {
+  color: black;
+
+  &:hover {
+    color: black;
+    text-decoration: underline;
+  }
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.new {
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
