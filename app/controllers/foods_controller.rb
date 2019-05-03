@@ -1,5 +1,6 @@
 class FoodsController < ApplicationController
   before_action :set_food, only: [:show, :edit, :update, :destroy]
+  access all: [:index], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
 
   # GET /foods
   # GET /foods.json
