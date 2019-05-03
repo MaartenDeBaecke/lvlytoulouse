@@ -25,6 +25,19 @@
         <li class="nav-item">
           <a class="nav-link" href="handy_stuff">Handy Stuff</a>
         </li>
+
+        <div class="register-nav" %>
+        <% if current_user.is_a?(GuestUser)%> 
+          <%= link_to "Registreer", new_user_registration_path %>
+        <% end %>
+        </div>
+        <div class="login-nav">   
+          <% if current_user.is_a?(GuestUser)%>  
+            <%= link_to "Aanmelden", new_user_session_path %>
+          <% else %>
+            <%= link_to "Uitloggen", destroy_user_session_path, method: :delete %>
+          <% end %>
+        </div>
       </ul>
     </div>
   </nav>

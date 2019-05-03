@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  devise_for :users
   resources :foods
   get 'foodd', to: 'pages#food'
   get 'toys', to: 'pages#toys'
