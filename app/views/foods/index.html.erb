@@ -10,10 +10,10 @@
           if (mq.matches) {
             if (mmq.matches) {
               if (m.matches) {
-                $("html, body").animate({ scrollTop: 230 }, "med");
+                $("html, body").animate({ scrollTop: 196 }, "med");
               return false;
               } else {
-              $("html, body").animate({ scrollTop: 220 }, "med");
+              $("html, body").animate({ scrollTop: 200 }, "med");
               return false;
               }
             } else {
@@ -22,7 +22,7 @@
             }
           }
           else if (mqq.matches) {
-            $("html, body").animate({ scrollTop: 230 }, "med");
+            $("html, body").animate({ scrollTop: 220 }, "med");
             return false;
           }
           
@@ -62,22 +62,36 @@
     <% else %>
     <% end %>
   </div>
-  <br>
+  <div class="btn-land">
+    <%= form_tag(foods_path, method: "get") do %>
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-primary">
+          <input type="radio" name="food_type" value="europe" id="europe" autocomplete="off" checked> Europe
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" name="food_type" value="usa" id="usa" autocomplete="off"> USA
+        </label>
+      </div>
+      
+      
+      <span class="btn btn-primary">
+          <i class="fa fa-check"></i> <input type="submit" value="Apply Filter"/>
+      </span>
 
-  <%= form_tag(foods_path, method: "get") do %>
-    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-      <label class="btn btn-primary active">
-        <input type="radio" name="food_type" value="europe" id="europe" autocomplete="off" checked> Europe
-      </label>
-      <label class="btn btn-primary">
-        <input type="radio" name="food_type" value="usa" id="usa" autocomplete="off"> USA
-      </label>
-    </div>
-    <input type="submit" value="Apply">
-  <% end %>
-
-  <br>
-  <br>
+      <style type="text/css">
+        span > i {
+          color: white;
+      }
+      span > input {
+          background: none;
+          color: white;
+          padding: 0;
+          border: 0;
+      }
+      </style>
+      
+    <% end %>
+  </div>
   <%= render @foods %>
 </body>
 <%= render "shared/footer" %>
