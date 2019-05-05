@@ -1,12 +1,14 @@
 class FoodsController < ApplicationController
   before_action :set_food, only: [:show, :edit, :update, :destroy]
-  access all: [:index, :angular], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
+  access all: [:index, :europe, :usa], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
+
 
   # GET /foods
   # GET /foods.json
   def index
-    @foods = Food.all
+    @foods = Food.send(food_type.to_sym)
   end
+
 
   # GET /foods/1
   # GET /foods/1.json
