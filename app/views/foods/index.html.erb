@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 <head>
   <%= render "shared/navfood" %>
   <script type="text/javascript">
@@ -11,24 +10,19 @@
           if (mq.matches) {
             if (mmq.matches) {
               if (m.matches) {
-                $("html, body").animate({ scrollTop: 780 }, "med");
+                $("html, body").animate({ scrollTop: 230 }, "med");
               return false;
               } else {
-              $("html, body").animate({ scrollTop: 740 }, "med");
+              $("html, body").animate({ scrollTop: 220 }, "med");
               return false;
               }
             } else {
-              $("html, body").animate({ scrollTop: 660 }, "med");
+              $("html, body").animate({ scrollTop: 230 }, "med");
             return false;
             }
           }
           else if (mqq.matches) {
-            $("html, body").animate({ scrollTop: 620 }, "med");
-            return false;
-          }
-
-          else {
-             $("html, body").animate({ scrollTop: 8000 }, "med");
+            $("html, body").animate({ scrollTop: 230 }, "med");
             return false;
           }
           
@@ -62,13 +56,23 @@
   </div>
   <br>
   <br>
+  <div class="new">
+    <% if logged_in?(:admin) %>
+      <%= link_to 'New Food', new_food_path, style: 'color:black'%>
+    <% else %>
+    <% end %>
+  </div>
+  <br>
+  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <label class="btn btn-primary active">
+      <input type="radio" name="options" id="europe" autocomplete="off" checked> Europe
+    </label>
+    <label class="btn btn-primary">
+      <input type="radio" name="options" id="usa" autocomplete="off"> USA
+    </label>
+  </div>
+  <br>
+  <br>
+  <%= render @foods %>
 </body>
-<div class="new">
-  <% if logged_in?(:admin) %>
-    <%= link_to 'New Food', new_food_path, style: 'color:black'%>
-  <% else %>
-  <% end %>
-</div>
-<%= render @foods %>
 <%= render "shared/footer" %>
-</body>

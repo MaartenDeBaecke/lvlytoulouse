@@ -1,6 +1,6 @@
 class FoodsController < ApplicationController
   before_action :set_food, only: [:show, :edit, :update, :destroy]
-  access all: [:index], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
+  access all: [:index, :angular], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
 
   # GET /foods
   # GET /foods.json
@@ -62,6 +62,14 @@ class FoodsController < ApplicationController
     end
   end
 
+  def europe
+    @angular_foods = Food.europe
+  end
+
+  def usa
+    @angular_foods = Food.usa
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_food
@@ -70,6 +78,6 @@ class FoodsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def food_params
-      params.require(:food).permit(:title, :description, :image, :name)
+      params.require(:food).permit(:title, :description, :image, :name, :land)
     end
 end

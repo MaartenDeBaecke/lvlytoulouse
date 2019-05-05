@@ -45,6 +45,11 @@
     margin-right: 13px;
   }
 
+  .food-card-container {
+    margin-left: 7px;
+    margin-right: 7px;
+  }
+
 }
 
 @media (min-width: 60em) {
@@ -60,6 +65,12 @@
     margin-right: auto !important;
   }
   .food-card-container {
+    max-width: 50em;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .new {
     max-width: 50em;
     margin-left: auto !important;
     margin-right: auto !important;
@@ -117,4 +128,15 @@
 .new {
   margin-left: 5px;
   margin-bottom: 5px;
+}
+
+.food-form {
+  padding: 17px;
+}
+
+.food-card-show-button {
+  text-align: right;
+  margin-bottom: 1rem;
+  margin-right: 16px;
+  color: white;
 }
