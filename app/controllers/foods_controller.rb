@@ -5,9 +5,21 @@ class FoodsController < ApplicationController
 
   # GET /foods
   # GET /foods.json
+  SUPPORTED_FOOD_TYPES = ["usa", "europe"].freeze
+
   def index
     @foods = Food.send(food_type.to_sym)
   end
+
+
+  def food_type
+    if SUPPORTED_FOOD_TYPES.include? params[:food_type]
+      params[:food_type]
+    else
+      'all'
+    end
+  end
+  
 
 
   # GET /foods/1
