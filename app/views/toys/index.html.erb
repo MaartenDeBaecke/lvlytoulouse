@@ -1,0 +1,97 @@
+<head>
+  <%= render "shared/navtoy" %>
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $("#back2Top").click(function(event) {
+          var mqq = window.matchMedia( "(max-width: 580px)" );
+          var mq = window.matchMedia( "(min-width: 580px)" );
+          var mmq = window.matchMedia( "(min-width: 770px)" );
+          var m = window.matchMedia( "(min-width: 1000px)" );
+          if (mq.matches) {
+            if (mmq.matches) {
+              if (m.matches) {
+                $("html, body").animate({ scrollTop: 196 }, "med");
+              return false;
+              } else {
+              $("html, body").animate({ scrollTop: 200 }, "med");
+              return false;
+              }
+            } else {
+              $("html, body").animate({ scrollTop: 230 }, "med");
+            return false;
+            }
+          }
+          else if (mqq.matches) {
+            $("html, body").animate({ scrollTop: 220 }, "med");
+            return false;
+          }
+          
+        });
+
+    });
+  </script>
+</head>
+<body>
+  <br><br><br>
+  <div class="comment-wrap">
+    <div class"card">
+      <div class="comment">
+        <div class="row">
+          <div class="col-xsm-6">
+            <div class="comments">
+              <%= image_tag "Toulouse2.jpg" %>
+            </div>
+          </div>
+          <div class="col-xsm-6">
+            <div class="comment-text">
+              <p>Hey, I love playing! What about <br>playing together? Here are my favorite toys!</p>
+            </div>
+            <div class="check-it">
+              <a id="back2Top"class="btn btn-primary" href _blanc>Check it out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="new">
+    <% if logged_in?(:admin) %>
+      <%= link_to 'New Toy', new_toy_path, style: 'color:black'%>
+    <% else %>
+    <% end %>
+  </div>
+  <div class="btn-land">
+    <%= form_tag(toys_path, method: "get") do %>
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-primary">
+          <input type="radio" name="toy_type" value="europetoys" id="europetoys" autocomplete="off" checked> Europe
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" name="toy_type" value="usatoys" id="usatoys" autocomplete="off"> USA
+        </label>
+      </div>
+      
+      
+      <span class="btn btn-primary">
+          <i class="fa fa-check"></i> <input type="submit" value="Apply Filter"/>
+      </span>
+
+      <style type="text/css">
+        span > i {
+          color: white;
+      }
+      span > input {
+          background: none;
+          color: white;
+          padding: 0;
+          border: 0;
+      }
+      </style>
+      
+    <% end %>
+  </div>
+  <%= render @toys %>
+</body>
+<%= render "shared/footer" %>
