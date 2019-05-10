@@ -1,10 +1,21 @@
 class ToysController < ApplicationController
   before_action :set_toy, only: [:show, :edit, :update, :destroy]
-  access all: [:index, :show, :new, :edit, :create, :update, :destroy], user: :all
+  access all: [:index, :europe, :usa], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
 
   # GET /toys
+  SUPPORTED_TOY_TYPES = ["usa", "europe"].freeze
+
   def index
-    @toys = Toy.all
+    @toys = Toy.send(toy_type.to_sym)
+  end
+
+
+  def toy_type
+    if SUPPORTED_TOY_TYPES.include? params[:toy_type]
+      params[:toy_type]
+    else
+      'all'
+    end
   end
 
   # GET /toys/1
@@ -44,6 +55,14 @@ class ToysController < ApplicationController
   def destroy
     @toy.destroy
     redirect_to toys_url, notice: 'Toy was successfully destroyed.'
+  end
+
+  def europe
+    @angular_toys = Toy.europe
+  end
+
+  def usa
+    @angular_toys = Toy.usa
   end
 
   private

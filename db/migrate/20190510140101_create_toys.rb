@@ -5,7 +5,7 @@ class CreateToys < ActiveRecord::Migration[5.2]
       t.text :description
       t.text :image
       t.string :name
-      t.integer :land
+      t.integer :land, :integer, default: 0
 
       t.timestamps
     end
