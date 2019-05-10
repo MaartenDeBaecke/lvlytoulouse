@@ -57,13 +57,6 @@ class ToysController < ApplicationController
     redirect_to toys_url, notice: 'Toy was successfully destroyed.'
   end
 
-  def europe
-    @angular_toys = Toy.europe
-  end
-
-  def usa
-    @angular_toys = Toy.usa
-  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

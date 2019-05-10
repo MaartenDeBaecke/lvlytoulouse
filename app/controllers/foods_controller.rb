@@ -76,13 +76,7 @@ class FoodsController < ApplicationController
     end
   end
 
-  def europe
-    @angular_foods = Food.europe
-  end
-
-  def usa
-    @angular_foods = Food.usa
-  end
+  
 
   private
     # Use callbacks to share common setup or constraints between actions.

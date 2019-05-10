@@ -1,0 +1,36 @@
+<div class="food-card-container">
+  <div class="card data-id="<%= handy_stuff.id %>">
+    <div class="food_card">
+      <div class="row">
+        <div class="col-3">
+          <div class="food_img">
+            <% if handy_stuff.image == ""%>
+              <%= image_tag "img_not_found.png" %>
+            <% else %>
+              <img src="<%= handy_stuff.image %>" onerror="this.src='https://static.wixstatic.com/media/299c16_38f1aebf206c4bf38939c7f24dc72139~mv2.png/v1/fill/w_407,h_560,al_c,q_80/img_not_found.webp'">
+            <% end %>
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="food_title">
+            <a href="<%= handy_stuff.title %>">
+              <div class="food_title1">
+                <%= handy_stuff.name %>
+              </div>  
+            </a>
+          </div>
+          <div class="food_description">
+            <p><%= handy_stuff.description %></p>
+          </div>
+          <%if logged_in?(:admin)%>
+            <div class="edit-food">
+              <%= link_to 'Edit', edit_handy_stuff_path(handy_stuff), style: 'color:black' %>
+              <%= link_to 'Delete', handy_stuff, method: :delete, data: { confirm: 'Are you sure?' }, style: 'color:black' %>
+            </div>
+          <% else %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

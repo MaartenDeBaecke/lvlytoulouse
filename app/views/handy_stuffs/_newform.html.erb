@@ -1,0 +1,57 @@
+<%= form_with(model: handy_stuff, local: true) do |f| %>
+  <% if handy_stuff.errors.any? %>
+    <% handy_stuff.errors.full_messages.each do |error| %>     
+        <%= alert_generator error %>
+    <% end %>
+  <% end %>
+
+  <%= render "shared/application_nav" %>
+  <br>
+  <br>
+  <br>
+  <br>
+    <div class="food-card-container">
+      <div class="food-form card">
+        <h2>New</h2>
+        <br>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <%= f.label :name %>
+              <%= f.text_field :name, class: 'form-control', placeholder: "Name of product" %>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :link %>
+              <%= f.text_area :title, class: 'form-control', placeholder: "link to product", rows: "5" %>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :image %>
+              <%= f.text_area :image, class: 'form-control', placeholder: "img link", rows: "6"  %>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <%= f.label :description %>
+              <%= f.text_area :description, class: 'form-control', placeholder: "description product", rows: "14"  %>
+            </div>
+
+            <div class="form-group">
+              <%= f.radio_button :land, 0 %> USA<br />
+              <%= f.radio_button :land, 1 %> Europe<br />
+            </div>
+          </div>
+        </div>
+        
+
+        <br>
+        <div class="actions">
+          <%= link_to "back", handy_stuffs_path, style: "color: black; position: absolute; right: 20px; bottom: 4rem;" %>
+          <%= f.submit "Save item", class: 'btn btn-primary btn-block' %>
+        </div>
+      </div>
+    </div>
+  <%= render "shared/footer" %>
+<% end %>
+
