@@ -3,18 +3,21 @@
 
 body {
   text-align: left;
-  
+
 }
 
 
 h1 {
-  font-size: 45px;
-  font-family: "Times New Roman";
+  font-size: 40px;
+  padding-right: 5px;
+  padding-left: 5px;
   text-align: center;
+  font-family: "Times New Roman", Times, serif;
 }
 
+
 .intro > img {
-    width: 100%;
+  width: 100%;
 }
 
 .comments{
@@ -23,7 +26,7 @@ h1 {
   height: 70px;
   overflow: hidden;
   border-radius: 50%;
-  margin-left: 1rem;
+  margin-left: -5px;
   margin-top: -4px;
   margin-bottom: -9px;
 }
@@ -49,11 +52,10 @@ h1 {
 .comments img {
   width: auto;
   height: 100%;
-  margin-left: 0px;
 }
 
 .comment-text {
-  margin-left: 20px;
+  margin-left: 25px;
 }
 
 @media (max-width: 48em) {
@@ -76,7 +78,6 @@ h1 {
   right: 4%;
   top: 35px;
 }
-
 
 @media (max-width: 60em) {
   .intro {
@@ -115,6 +116,10 @@ h1 {
     font-family: 'Roboto', sans-serif;
     box-shadow: 3px -5px 9px rgba(0,0,0,0.12), 0 0px 3px rgba(0,0,0,0.3);
   }
+}
+
+@media (max-width: 30em) {
+
 }
 
 @media (min-width: 60em) {
