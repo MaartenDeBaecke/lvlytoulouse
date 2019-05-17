@@ -93,6 +93,10 @@
   .check-it {
     margin-left: 20px;
   }
+  .food_img > img{
+    width: 7rem;
+    padding: 12px;
+  }
 }
 
 @media (min-width: 48em) {
@@ -101,12 +105,14 @@
     right: 4%;
     top: 35px;
   }
+
+  .food_img > img{
+    width: 10rem;
+    padding: 15px;
+  }
 }
 
-.food_img > img{
-  width: 10rem;
-  padding: 15px;
-}
+
 
 .food_title {
   margin-left: 2rem;
@@ -151,5 +157,11 @@
   margin-bottom: 1rem;
   margin-right: 16px;
   color: white;
+}
+
+
+
+.restricted {
+  max-width: 47px;
 }
 
