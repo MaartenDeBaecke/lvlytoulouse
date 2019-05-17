@@ -37,7 +37,7 @@ h1 {
   height: 70px;
   overflow: hidden;
   border-radius: 50%;
-  margin-left: 1rem;
+  margin-left: -5px;
   margin-top: -4px;
   margin-bottom: -9px;
 }
@@ -56,6 +56,7 @@ h1 {
 
 .comment-text {
   margin-left: 25px;
+  margin-top:5px;
 }
 
 @media (max-width: 48em) {
@@ -68,8 +69,12 @@ h1 {
   .check-it {
     position: absolute;
     right: 4%;
-    top: 35px;
-
+    top: 12px;
+  }
+  .comment-text {
+    margin-left: 25px;
+    max-width: 70%;
+    margin-top:5px;
   }
 }
 
@@ -208,3 +213,6 @@ a {
   border-color: rgb(250,80,86);
 }
 
+.restricted {
+  max-width: 47px;
+}
