@@ -251,8 +251,12 @@ a {
 
 @media (max-width: 28rem) {
   .menu-btn-three {
-    text-align: right;
-    margin-right: 7px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+  }
+  .menu2-comment-text {
+    margin-bottom: 38px;
   }  
 }
 
