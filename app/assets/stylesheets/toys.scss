@@ -1,3 +1,13 @@
-// Place all the styles related to the toys controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@media (max-width: 48em) {
+  .check-it-toys {
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: 48em) {
+  .check-it-toys {
+    position: absolute;
+    right: -9%;
+    top: 12px;
+  }
+}

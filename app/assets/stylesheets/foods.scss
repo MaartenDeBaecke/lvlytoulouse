@@ -90,7 +90,7 @@
 }
 
 @media (max-width: 48em) {
-  .check-it {
+  .check-it-food {
     margin-left: 20px;
   }
   .food_img > img{
@@ -100,9 +100,9 @@
 }
 
 @media (min-width: 48em) {
-  .check-it {
+  .check-it-food {
     position: absolute;
-    right: 4%;
+    right: -9%;
     top: 35px;
   }
 
