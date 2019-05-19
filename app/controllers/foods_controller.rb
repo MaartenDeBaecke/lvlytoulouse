@@ -9,6 +9,7 @@ class FoodsController < ApplicationController
 
   def index
     @foods = Food.send(food_type.to_sym)
+    @page_title = "Lovely Toulouse | Food"
   end
 
 

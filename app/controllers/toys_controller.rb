@@ -7,6 +7,7 @@ class ToysController < ApplicationController
 
   def index
     @toys = Toy.send(toy_type.to_sym)
+    @page_title = "Lovely Toulouse | Toys"
   end
 
 

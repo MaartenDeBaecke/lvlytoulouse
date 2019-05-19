@@ -9,6 +9,7 @@ class HandyStuffsController < ApplicationController
 
   def index
     @handy_stuffs = HandyStuff.send(handy_stuff_type.to_sym)
+    @page_title = "Lovely Toulouse | Handy Stuff"
   end
 
 
