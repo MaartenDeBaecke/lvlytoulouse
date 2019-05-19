@@ -7,7 +7,11 @@
             <% if handy_stuff.image == ""%>
               <%= image_tag "img_not_found.png" %>
             <% else %>
-              <img src="<%= handy_stuff.image %>" onerror="this.src='https://static.wixstatic.com/media/299c16_38f1aebf206c4bf38939c7f24dc72139~mv2.png/v1/fill/w_407,h_560,al_c,q_80/img_not_found.webp'">
+              <a href="<%= handy_stuff.title %>">
+                <div class="food_img">
+                  <img src="<%= handy_stuff.image %>" onerror="this.src='https://static.wixstatic.com/media/299c16_38f1aebf206c4bf38939c7f24dc72139~mv2.png/v1/fill/w_407,h_560,al_c,q_80/img_not_found.webp'">
+                </div>
+              </a>
             <% end %>
           </div>
         </div>
